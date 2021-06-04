@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  font-family: 'Work sans', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+  line-height: 140%;
+}
+body {
+  margin: 0;
+  letter-spacing: -0.02em;
+  background: #699bf7;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.d-flex {
+  display: flex;
+}
+.space-between {
+  justify-content: space-between;
+}
+.align-center {
+  align-items: center;
+}
+.flex-center-all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  color: #000;
+}
+
+.emoji {
+  font-size: 1.5rem;
+}
+
+.card {
+  background-color: #000;
+  border-radius: 20px;
+  width: 400px;
+  min-height: 714px;
+  padding: 8px;
+}
+
+.card--header {
+  padding: 0px 8px;
+  font-weight: 500;
+  font-size: 18px;
+}
+.card--section.card--profile {
+  height: 275px;
+  overflow: hidden;
+  background: red;
+  position: relative;
+  padding: 0;
+}
+
+.card--profile:after,
+.card--profile:before {
+  content: '';
+  position: absolute;
+  width: 234px;
+  height: 234px;
+  background: #ffc700;
+  border-radius: 50%;
+  filter: blur(40px);
+  transform: rotate(45deg);
+  z-index: 1;
+}
+
+.card--profile:after {
+  top: -40%;
+  right: -20%;
+  animation: moveTopLight 1s linear infinite forwards alternate;
+}
+.card--profile:before {
+  bottom: -40%;
+  left: -20%;
+  animation: moveBottomLight 1s linear infinite forwards alternate;
+}
+
+@keyframes moveTopLight {
+  from {
+    right: -20%;
+  }
+  to {
+    right: -25%;
+  }
+}
+
+@keyframes moveBottomLight {
+  from {
+    left: -20%;
+  }
+  to {
+    left: -25%;
+  }
+}
+
+.card--profile img {
+  width: 100%;
+  height: 100%;
+  clip-path: circle(100% at 50% 50%);
+  animation: imageReveal 1s linear forwards alternate;
+  filter: grayscale(100%);
+}
+
+@keyframes imageReveal {
+  to {
+    clip-path: circle(39.1% at 50% 50%);
+  }
+}
+
+.card--body {
+  position: relative;
+}
+
+.card--section {
+  width: 100%;
+  border-radius: 20px;
+  background-color: #ffc700;
+  margin-top: 8px;
+  padding: 9px 15px;
+}
+.card--section-with-link {
+  min-height: 189px;
+  display: flex;
+  padding: 0;
+  flex-direction: column;
+}
+.card--section--description {
+  padding: 13px;
+}
+.card--section--links {
+  margin-top: auto;
+  border-top: 1px solid black;
+  padding: 13px 12px;
+  display: flex;
+}
+.card--section--links > a:first-child {
+  margin-left: 0;
+}
+.card--section--links > a {
+  margin-left: 20px;
+}
+
+.card--icons-section {
+  position: relative;
+}
+.card--icons-section img {
+  position: absolute;
+  width: 100px;
+}
+img.logo-postgres {
+  right: -10px;
+  top: 10px;
+  transform: rotate(-12deg);
+  width: 100px;
+}
+img.logo-html5 {
+  right: 80px;
+  top: 40px;
+  transform: rotate(32deg);
+  width: 100px;
+}
+img.logo-js {
+  right: 50%;
+  transform: rotate(7deg);
+  width: 50px;
+}
+img.logo-node {
+  right: 50%;
+  top: 70px;
+  transform: rotate(-7deg);
+  width: 100px;
+}
+img.logo-gq {
+  left: 10px;
+  top: 75px;
+  transform: rotate(17deg);
+  width: 50px;
+}
+img.logo-docker {
+  left: 0;
+  top: 0;
+  transform: rotate(-17deg);
+  width: 100px;
+}
